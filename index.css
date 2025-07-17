@@ -1,9 +1,136 @@
-body{
-    width: 1920px;
+html, body, main {
+  margin: 0;
+  padding: 0;
+  width: 1920px;
+  min-width: 1920px;
+  overflow-x: auto;
 }
-.header{
+
+.header-container{
     width: 1920px;
     height: 150px;
     flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
     background-color: #030303;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 59px 0 58px 240px;
+    width: 199px;
+    height: 33px;
+    flex-shrink: 0;
+}
+
+.logo-icon{
+    width: 49px;
+    height: 26px;
+    flex-shrink: 0;
+}
+
+.logo-text{
+    margin: 0;
+    width: 125px;
+    color: #FFF;
+    font-family: Forum;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.navigation {
+    display: flex;
+    margin-right: 240px;
+    gap: 55px;
+    width: min(775px, 100%);
+    padding: 10px 0;
+}
+
+.navigation a {
+    color: #FFF;
+    width: 82px;
+    flex-shrink: 0;
+    font: 200 22px 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    text-align: center;
+}
+
+.navigation a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.welcome {
+    width: 1920px;
+    height: 842px;
+    flex-shrink: 0;
+    background-color: #030303;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.welcome-text{
+    width: 593px;
+    color: #FFF;
+    font-family: 'Forum', serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.welcome-pre {
+    font-family: inherit;
+    color: inherit;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+}
+
+.overlay{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.main-photo{
+    width: 1000px;
+    height: 750px;
+    flex-shrink: 0;
+}
+
+.gradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(
+    90deg, 
+    rgba(0,0,0,0.8) 0%, 
+    rgba(0,0,0,0.4) 30%, 
+    transparent 100%
+    );
+    pointer-events: none;
 }
